@@ -13,6 +13,20 @@
 		BC78E7AA26163BB500371773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7A826163BB500371773 /* Main.storyboard */; };
 		BC78E7AC26163BB700371773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7AB26163BB700371773 /* Assets.xcassets */; };
 		BC78E7AF26163BB700371773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7AD26163BB700371773 /* LaunchScreen.storyboard */; };
+		BC78E7B92616676800371773 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7B82616676800371773 /* Album.swift */; };
+		BC78E7BC2616678800371773 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7BB2616678800371773 /* Song.swift */; };
+		BC78E7BF2616682100371773 /* AlbumProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7BE2616682100371773 /* AlbumProvider.swift */; };
+		BCE09EB6261671780069F48E /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EB5261671780069F48E /* Data.json */; };
+		BCE09EBA261674F40069F48E /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */; };
+		BCE09EC32617A3EC0069F48E /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EBF2617A3EC0069F48E /* Rubik-Medium.ttf */; };
+		BCE09EC42617A3EC0069F48E /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EC02617A3EC0069F48E /* Rubik-Regular.ttf */; };
+		BCE09EC52617A3EC0069F48E /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EC12617A3EC0069F48E /* Rubik-Light.ttf */; };
+		BCE09EC62617A3EC0069F48E /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EC22617A3EC0069F48E /* Rubik-Bold.ttf */; };
+		BCE09EC92617A3FA0069F48E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09EC82617A3FA0069F48E /* FontManager.swift */; };
+		BCE09ECD2617A54C0069F48E /* UIColor+Hexa.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09ECC2617A54C0069F48E /* UIColor+Hexa.swift */; };
+		BCE09ED12617A5940069F48E /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09ED02617A5940069F48E /* ColorManager.swift */; };
+		BCE09ED72617A8360069F48E /* UILabel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09ED62617A8360069F48E /* UILabel+Factory.swift */; };
+		BCE09EDB2617AA580069F48E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09EDA2617AA580069F48E /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		BC78E7AB26163BB700371773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC78E7AE26163BB700371773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC78E7B026163BB700371773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC78E7B82616676800371773 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		BC78E7BB2616678800371773 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		BC78E7BE2616682100371773 /* AlbumProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumProvider.swift; sourceTree = "<group>"; };
+		BCE09EB5261671780069F48E /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCE09EBF2617A3EC0069F48E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		BCE09EC02617A3EC0069F48E /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		BCE09EC12617A3EC0069F48E /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		BCE09EC22617A3EC0069F48E /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		BCE09EC82617A3FA0069F48E /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		BCE09ECC2617A54C0069F48E /* UIColor+Hexa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexa.swift"; sourceTree = "<group>"; };
+		BCE09ED02617A5940069F48E /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		BCE09ED62617A8360069F48E /* UILabel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Factory.swift"; sourceTree = "<group>"; };
+		BCE09EDA2617AA580069F48E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,10 @@
 		BC78E7A126163BB500371773 /* custom-transitions */ = {
 			isa = PBXGroup;
 			children = (
+				BC78E7C12616686D00371773 /* Resources */,
+				BCE09EBC2617A3790069F48E /* Utility */,
+				BC78E7B72616675900371773 /* Model */,
+				BCE09EB8261673780069F48E /* View */,
 				BC78E7A226163BB500371773 /* AppDelegate.swift */,
 				BC78E7A426163BB500371773 /* SceneDelegate.swift */,
 				BC78E7A626163BB500371773 /* ViewController.swift */,
@@ -65,6 +97,80 @@
 				BC78E7B026163BB700371773 /* Info.plist */,
 			);
 			path = "custom-transitions";
+			sourceTree = "<group>";
+		};
+		BC78E7B72616675900371773 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E7B82616676800371773 /* Album.swift */,
+				BC78E7BB2616678800371773 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC78E7C12616686D00371773 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EB5261671780069F48E /* Data.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BCE09EB8261673780069F48E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCE09EBC2617A3790069F48E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EBD2617A3800069F48E /* Fonts */,
+				BCE09ECB2617A5380069F48E /* Colors */,
+				BCE09ED52617A8280069F48E /* Factory */,
+				BC78E7BE2616682100371773 /* AlbumProvider.swift */,
+				BCE09EDA2617AA580069F48E /* ReusableView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BCE09EBD2617A3800069F48E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EBE2617A3D80069F48E /* Rubik */,
+				BCE09EC82617A3FA0069F48E /* FontManager.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BCE09EBE2617A3D80069F48E /* Rubik */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EC22617A3EC0069F48E /* Rubik-Bold.ttf */,
+				BCE09EC12617A3EC0069F48E /* Rubik-Light.ttf */,
+				BCE09EBF2617A3EC0069F48E /* Rubik-Medium.ttf */,
+				BCE09EC02617A3EC0069F48E /* Rubik-Regular.ttf */,
+			);
+			path = Rubik;
+			sourceTree = "<group>";
+		};
+		BCE09ECB2617A5380069F48E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09ECC2617A54C0069F48E /* UIColor+Hexa.swift */,
+				BCE09ED02617A5940069F48E /* ColorManager.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		BCE09ED52617A8280069F48E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09ED62617A8360069F48E /* UILabel+Factory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC78E7AF26163BB700371773 /* LaunchScreen.storyboard in Resources */,
+				BCE09EC42617A3EC0069F48E /* Rubik-Regular.ttf in Resources */,
 				BC78E7AC26163BB700371773 /* Assets.xcassets in Resources */,
 				BC78E7AA26163BB500371773 /* Main.storyboard in Resources */,
+				BCE09EB6261671780069F48E /* Data.json in Resources */,
+				BCE09EC62617A3EC0069F48E /* Rubik-Bold.ttf in Resources */,
+				BCE09EC52617A3EC0069F48E /* Rubik-Light.ttf in Resources */,
+				BCE09EC32617A3EC0069F48E /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC78E7BF2616682100371773 /* AlbumProvider.swift in Sources */,
+				BCE09ED12617A5940069F48E /* ColorManager.swift in Sources */,
 				BC78E7A726163BB500371773 /* ViewController.swift in Sources */,
+				BCE09EDB2617AA580069F48E /* ReusableView.swift in Sources */,
 				BC78E7A326163BB500371773 /* AppDelegate.swift in Sources */,
+				BC78E7BC2616678800371773 /* Song.swift in Sources */,
 				BC78E7A526163BB500371773 /* SceneDelegate.swift in Sources */,
+				BC78E7B92616676800371773 /* Album.swift in Sources */,
+				BCE09ECD2617A54C0069F48E /* UIColor+Hexa.swift in Sources */,
+				BCE09EC92617A3FA0069F48E /* FontManager.swift in Sources */,
+				BCE09ED72617A8360069F48E /* UILabel+Factory.swift in Sources */,
+				BCE09EBA261674F40069F48E /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
