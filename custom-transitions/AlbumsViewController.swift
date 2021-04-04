@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlbumsViewController: UIViewController {
     
     // MARK: - Subviews
     
@@ -15,7 +15,12 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    var albums = [Album]()
+    private var albums = [Album]()
+    private var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+        }
+    }
     
     // MARK: - Life Cycle
     
@@ -28,12 +33,12 @@ class ViewController: UIViewController {
         
         setupUI()
     }
-
+    
 }
 
 // MARK: - Setups
 
-private extension ViewController {
+private extension AlbumsViewController {
     
     func setupUI() {
         setupBackgroundColor()
@@ -105,7 +110,7 @@ private extension ViewController {
 
 // MARK: - UICollectionView DataSource
 
-extension ViewController: UICollectionViewDataSource {
+extension AlbumsViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -125,10 +130,42 @@ extension ViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionView Delegate
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension AlbumsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let collectionViewSize = collectionView.bounds.size
         return .init(width: collectionViewSize.width - 20, height: collectionViewSize.height - 10)
+    }
+}
+
+// MARK: - UICollectionView Delegate
+extension AlbumsViewController: UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        currentPage = getCurrentPage(in: scrollView)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        currentPage = getCurrentPage(in: scrollView)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        currentPage = getCurrentPage(in: scrollView)
+    }
+}
+
+// MARK: - Helpers
+
+extension AlbumsViewController {
+    func getCurrentPage(in scrollView: UIScrollView) -> Int {
+        
+        guard let collection = scrollView as? UICollectionView else { return currentPage}
+        
+        let visibleRect = CGRect(origin: collection.contentOffset, size: collection.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        if let visibleIndexPath = collection.indexPathForItem(at: visiblePoint) {
+            return visibleIndexPath.row
+        }
+        
+        return currentPage
     }
 }

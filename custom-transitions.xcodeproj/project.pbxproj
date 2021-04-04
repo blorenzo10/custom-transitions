@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC78E7A326163BB500371773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A226163BB500371773 /* AppDelegate.swift */; };
 		BC78E7A526163BB500371773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A426163BB500371773 /* SceneDelegate.swift */; };
-		BC78E7A726163BB500371773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A626163BB500371773 /* ViewController.swift */; };
+		BC78E7A726163BB500371773 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A626163BB500371773 /* AlbumsViewController.swift */; };
 		BC78E7AA26163BB500371773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7A826163BB500371773 /* Main.storyboard */; };
 		BC78E7AC26163BB700371773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7AB26163BB700371773 /* Assets.xcassets */; };
 		BC78E7AF26163BB700371773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC78E7AD26163BB700371773 /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		BC78E79F26163BB500371773 /* custom-transitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "custom-transitions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC78E7A226163BB500371773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC78E7A426163BB500371773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC78E7A626163BB500371773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC78E7A626163BB500371773 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		BC78E7A926163BB500371773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC78E7AB26163BB700371773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC78E7AE26163BB700371773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC6AD9D8261A5AA90040369C /* AlbumsViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlbumsViewController;
+			sourceTree = "<group>";
+		};
 		BC78E79626163BB500371773 = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +95,10 @@
 				BCE09EBC2617A3790069F48E /* Utility */,
 				BC78E7B72616675900371773 /* Model */,
 				BCE09EB8261673780069F48E /* View */,
+				BC6AD9D8261A5AA90040369C /* AlbumsViewController */,
 				BC78E7A226163BB500371773 /* AppDelegate.swift */,
 				BC78E7A426163BB500371773 /* SceneDelegate.swift */,
-				BC78E7A626163BB500371773 /* ViewController.swift */,
+				BC78E7A626163BB500371773 /* AlbumsViewController.swift */,
 				BC78E7A826163BB500371773 /* Main.storyboard */,
 				BC78E7AB26163BB700371773 /* Assets.xcassets */,
 				BC78E7AD26163BB700371773 /* LaunchScreen.storyboard */,
@@ -250,7 +258,7 @@
 			files = (
 				BC78E7BF2616682100371773 /* AlbumProvider.swift in Sources */,
 				BCE09ED12617A5940069F48E /* ColorManager.swift in Sources */,
-				BC78E7A726163BB500371773 /* ViewController.swift in Sources */,
+				BC78E7A726163BB500371773 /* AlbumsViewController.swift in Sources */,
 				BCE09EDB2617AA580069F48E /* ReusableView.swift in Sources */,
 				BC78E7A326163BB500371773 /* AppDelegate.swift in Sources */,
 				BC78E7BC2616678800371773 /* Song.swift in Sources */,
