@@ -36,3 +36,28 @@ extension UILabel {
         return label
     }
 }
+
+extension UILabel {
+    enum AlbumDetailType {
+        case title
+        case song
+    }
+    
+    static func albumDetailLabel(type: AlbumDetailType) -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = .white
+        
+        switch type {
+        case .title:
+            label.font = .titleFont
+        
+        case .song:
+            label.font = .songTitleFont
+            label.textAlignment = .left
+        }
+        
+        return label
+    }
+}
