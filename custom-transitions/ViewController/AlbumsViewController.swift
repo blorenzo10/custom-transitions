@@ -9,9 +9,14 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
     
+    typealias TransitionComponents = (albumCoverImageView: UIImageView?, albumNameLabel: UILabel?)
+    
     // MARK: - Subviews
     
     private var pageControl = UIPageControl(frame: .zero)
+    public var transitionComponents = TransitionComponents(albumCoverImageView: nil, albumNameLabel: nil)
+    public var albumsCollectionView: UICollectionView?
+    public var currentCell: AlbumCollectionViewCell?
     
     // MARK: - Properties
     
@@ -21,17 +26,24 @@ class AlbumsViewController: UIViewController {
             pageControl.currentPage = currentPage
         }
     }
+    private let transitionManager = TransitionManager(duration: 0.5)
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        navigationController?.navigationBar.isHidden = true
         
         let provider = AlbumProvider()
         albums.append(contentsOf: provider.getAllAlbums())
         pageControl.numberOfPages = albums.count
         
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
 }
@@ -84,7 +96,7 @@ private extension AlbumsViewController {
         albumCollection.dataSource = self
         albumCollection.delegate = self
         albumCollection.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.reuseIdentifier)
-        
+        self.albumsCollectionView = albumCollection
         view.addSubview(albumCollection)
         albumCollection.translatesAutoresizingMaskIntoConstraints = false
         albumCollection.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -124,15 +136,18 @@ extension AlbumsViewController: UICollectionViewDataSource {
         
         let album = albums[indexPath.row]
         cell.configure(with: album)
+        
+        if indexPath.row == 0 {
+            currentCell = cell
+        }
         return cell
     }
 }
 
-// MARK: - UICollectionView Delegate
+// MARK: - UICollectionViewDelegateFlowLayout Delegate
 
 extension AlbumsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let collectionViewSize = collectionView.bounds.size
         return .init(width: collectionViewSize.width - 20, height: collectionViewSize.height - 10)
     }
@@ -140,6 +155,12 @@ extension AlbumsViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - UICollectionView Delegate
 extension AlbumsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let albumDetailViewController = AlbumDetailViewController(album: albums[indexPath.row])
+        navigationController?.delegate = transitionManager
+        navigationController?.pushViewController(albumDetailViewController, animated: true)
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         currentPage = getCurrentPage(in: scrollView)
     }
@@ -162,7 +183,11 @@ extension AlbumsViewController {
         
         let visibleRect = CGRect(origin: collection.contentOffset, size: collection.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = collection.indexPathForItem(at: visiblePoint) {
+        if
+            let visibleIndexPath = collection.indexPathForItem(at: visiblePoint),
+            let cell = collection.cellForItem(at: visibleIndexPath) as? AlbumCollectionViewCell {
+            
+            currentCell = cell
             return visibleIndexPath.row
         }
         

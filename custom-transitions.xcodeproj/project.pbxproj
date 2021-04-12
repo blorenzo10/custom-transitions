@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC6AD9DA261A5B750040369C /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD9D9261A5B750040369C /* AlbumDetailViewController.swift */; };
+		BC6AD9DF261A5C460040369C /* AlbumDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD9DE261A5C460040369C /* AlbumDetailHeaderView.swift */; };
+		BC6AD9E3261A5CCF0040369C /* UIButton+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD9E2261A5CCF0040369C /* UIButton+Factory.swift */; };
 		BC78E7A326163BB500371773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A226163BB500371773 /* AppDelegate.swift */; };
 		BC78E7A526163BB500371773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A426163BB500371773 /* SceneDelegate.swift */; };
 		BC78E7A726163BB500371773 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7A626163BB500371773 /* AlbumsViewController.swift */; };
@@ -16,6 +19,9 @@
 		BC78E7B92616676800371773 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7B82616676800371773 /* Album.swift */; };
 		BC78E7BC2616678800371773 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7BB2616678800371773 /* Song.swift */; };
 		BC78E7BF2616682100371773 /* AlbumProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78E7BE2616682100371773 /* AlbumProvider.swift */; };
+		BCA2C2CB261BE6A600EB9425 /* AlbumDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA2C2CA261BE6A600EB9425 /* AlbumDetailCollectionCell.swift */; };
+		BCA2C2D0261C009800EB9425 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA2C2CF261C009800EB9425 /* TransitionManager.swift */; };
+		BCA4F521262240DF008FA73B /* CAGradientLayer+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4F520262240DF008FA73B /* CAGradientLayer+Factory.swift */; };
 		BCE09EB6261671780069F48E /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EB5261671780069F48E /* Data.json */; };
 		BCE09EBA261674F40069F48E /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */; };
 		BCE09EC32617A3EC0069F48E /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE09EBF2617A3EC0069F48E /* Rubik-Medium.ttf */; };
@@ -30,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC6AD9D9261A5B750040369C /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		BC6AD9DE261A5C460040369C /* AlbumDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailHeaderView.swift; sourceTree = "<group>"; };
+		BC6AD9E2261A5CCF0040369C /* UIButton+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Factory.swift"; sourceTree = "<group>"; };
 		BC78E79F26163BB500371773 /* custom-transitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "custom-transitions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC78E7A226163BB500371773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC78E7A426163BB500371773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +50,9 @@
 		BC78E7B82616676800371773 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		BC78E7BB2616678800371773 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		BC78E7BE2616682100371773 /* AlbumProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumProvider.swift; sourceTree = "<group>"; };
+		BCA2C2CA261BE6A600EB9425 /* AlbumDetailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailCollectionCell.swift; sourceTree = "<group>"; };
+		BCA2C2CF261C009800EB9425 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		BCA4F520262240DF008FA73B /* CAGradientLayer+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Factory.swift"; sourceTree = "<group>"; };
 		BCE09EB5261671780069F48E /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCE09EBF2617A3EC0069F48E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
@@ -65,11 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC6AD9D8261A5AA90040369C /* AlbumsViewController */ = {
+		BC6AD9D8261A5AA90040369C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC78E7A626163BB500371773 /* AlbumsViewController.swift */,
+				BC6AD9D9261A5B750040369C /* AlbumDetailViewController.swift */,
 			);
-			path = AlbumsViewController;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BC6AD9DD261A5C340040369C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */,
+				BCA2C2CA261BE6A600EB9425 /* AlbumDetailCollectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BC78E79626163BB500371773 = {
@@ -95,10 +118,10 @@
 				BCE09EBC2617A3790069F48E /* Utility */,
 				BC78E7B72616675900371773 /* Model */,
 				BCE09EB8261673780069F48E /* View */,
-				BC6AD9D8261A5AA90040369C /* AlbumsViewController */,
+				BC6AD9D8261A5AA90040369C /* ViewController */,
+				BCA2C2CD261BFFAD00EB9425 /* Transitions */,
 				BC78E7A226163BB500371773 /* AppDelegate.swift */,
 				BC78E7A426163BB500371773 /* SceneDelegate.swift */,
-				BC78E7A626163BB500371773 /* AlbumsViewController.swift */,
 				BC78E7A826163BB500371773 /* Main.storyboard */,
 				BC78E7AB26163BB700371773 /* Assets.xcassets */,
 				BC78E7AD26163BB700371773 /* LaunchScreen.storyboard */,
@@ -124,10 +147,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BCA2C2CD261BFFAD00EB9425 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				BCA2C2CF261C009800EB9425 /* TransitionManager.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		BCE09EB8261673780069F48E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BCE09EB9261674F40069F48E /* AlbumCollectionViewCell.swift */,
+				BC6AD9DD261A5C340040369C /* Cells */,
+				BC6AD9DE261A5C460040369C /* AlbumDetailHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				BCE09ED62617A8360069F48E /* UILabel+Factory.swift */,
+				BC6AD9E2261A5CCF0040369C /* UIButton+Factory.swift */,
+				BCA4F520262240DF008FA73B /* CAGradientLayer+Factory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -256,13 +290,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA4F521262240DF008FA73B /* CAGradientLayer+Factory.swift in Sources */,
+				BC6AD9DF261A5C460040369C /* AlbumDetailHeaderView.swift in Sources */,
 				BC78E7BF2616682100371773 /* AlbumProvider.swift in Sources */,
 				BCE09ED12617A5940069F48E /* ColorManager.swift in Sources */,
+				BC6AD9E3261A5CCF0040369C /* UIButton+Factory.swift in Sources */,
 				BC78E7A726163BB500371773 /* AlbumsViewController.swift in Sources */,
 				BCE09EDB2617AA580069F48E /* ReusableView.swift in Sources */,
 				BC78E7A326163BB500371773 /* AppDelegate.swift in Sources */,
+				BCA2C2D0261C009800EB9425 /* TransitionManager.swift in Sources */,
 				BC78E7BC2616678800371773 /* Song.swift in Sources */,
 				BC78E7A526163BB500371773 /* SceneDelegate.swift in Sources */,
+				BC6AD9DA261A5B750040369C /* AlbumDetailViewController.swift in Sources */,
+				BCA2C2CB261BE6A600EB9425 /* AlbumDetailCollectionCell.swift in Sources */,
 				BC78E7B92616676800371773 /* Album.swift in Sources */,
 				BCE09ECD2617A54C0069F48E /* UIColor+Hexa.swift in Sources */,
 				BCE09EC92617A3FA0069F48E /* FontManager.swift in Sources */,

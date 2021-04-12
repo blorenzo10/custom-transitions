@@ -11,7 +11,7 @@ final class AlbumCollectionViewCell: UICollectionViewCell, ReusableView {
     
     // MARK: - Subviews
     
-    private lazy var albumCoverImageView = UIImageView()
+    public lazy var albumCoverImageView = UIImageView()
     private lazy var albumNameLabel = UILabel.albumCoverLabel(type: .title)
     private lazy var albumReleaseYearLabel = UILabel.albumCoverLabel(type: .subtitle)
     private lazy var songsQuantityLabel = UILabel.albumCoverLabel(type: .regular)
@@ -35,15 +35,7 @@ final class AlbumCollectionViewCell: UICollectionViewCell, ReusableView {
 private extension AlbumCollectionViewCell {
     func setupUI() {
         backgroundColor = .clear
-        contentView.backgroundColor = .clear
-        
-        let gradient = CAGradientLayer()
-        gradient.frame = contentView.bounds
-        gradient.colors = [UIColor.backgroundColorGradient1 ?? .black, UIColor.backgroundColorGradient2 ?? .black].map { $0.cgColor }
-        gradient.startPoint = .init(x: 0.5, y: 0)
-        gradient.endPoint = .init(x: 0.5, y: 1)
-        gradient.locations = [0.5]
-        contentView.layer.insertSublayer(gradient, at: 0)
+        contentView.backgroundColor = .albumBackgroundColor
             
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 24
@@ -94,5 +86,15 @@ extension AlbumCollectionViewCell {
         albumNameLabel.text = album.name
         albumReleaseYearLabel.text = "\(album.releaseYear)"
         songsQuantityLabel.text = "\(album.songs.count) songs"
+    }
+    
+    public func animateCellOut(_ completion: @escaping () -> Void) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.albumNameLabel.alpha = 0
+            self.albumReleaseYearLabel.alpha = 0
+            self.songsQuantityLabel.alpha = 0
+        }, completion: {_ in 
+            completion()
+        })
     }
 }
