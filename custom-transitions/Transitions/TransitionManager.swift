@@ -33,7 +33,7 @@ final class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning {
     }
 }
 
-// MARK: -
+// MARK: - UINavigationControllerDelegate
 
 extension TransitionManager: UINavigationControllerDelegate {
     func navigationController(
@@ -86,7 +86,6 @@ private extension TransitionManager {
             let albumDetailHeaderView = toViewController.headerView
         else { return}
         
-        toViewController.view.setNeedsLayout()
         toViewController.view.layoutIfNeeded()
         
         let containerView = context.containerView
@@ -111,27 +110,19 @@ private extension TransitionManager {
         toViewController.view.isHidden = true
         
         let animator = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
-            
             snapshotContentView.frame = containerView.convert(toViewController.view.frame, from: toViewController.view)
             snapshotAlbumCoverImageView.frame = containerView.convert(albumDetailHeaderView.albumCoverImageView.frame, from: albumDetailHeaderView)
+            snapshotAlbumCoverImageView.layer.cornerRadius = 0
         }
 
         animator.addCompletion { position in
             toViewController.view.isHidden = false
-            
             snapshotAlbumCoverImageView.removeFromSuperview()
             snapshotContentView.removeFromSuperview()
-            
             context.completeTransition(position == .end)
         }
 
         animator.startAnimation()
-        
-        let cornerAnimator = CABasicAnimation(keyPath: #keyPath(CALayer.cornerRadius))
-        cornerAnimator.fromValue = snapshotAlbumCoverImageView.layer.cornerRadius
-        cornerAnimator.toValue = 0
-        cornerAnimator.duration = duration
-        snapshotAlbumCoverImageView.layer.add(cornerAnimator, forKey: "CornerAnimation")
     }
     
     func dismissViewController(_ fromViewController: AlbumDetailViewController, to toViewController: AlbumsViewController) {
